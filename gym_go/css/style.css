@@ -1,0 +1,269 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: whitesmoke;
+}
+
+.header {
+  margin: auto;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0rem;
+  border-bottom: 2px solid black;
+}
+
+.header #logo {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.header ul {
+  width: 40rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header ul a {
+  color: grey;
+}
+
+.header ul a:hover {
+  color: black;
+}
+
+.header ul .active {
+  color: black;
+}
+
+.header #btn {
+  padding: 0.6rem 2.4rem;
+  background-color: black;
+  color: whitesmoke;
+  border-radius: 2.4rem;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+.sec1 {
+  margin: auto;
+  width: 80%;
+  position: relative;
+  padding: 1rem 0rem;
+  border-bottom: 2px solid black;
+}
+
+.sec1 .top-heading-ctn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sec1 .top-heading-ctn .title {
+  width: 40rem;
+  font-size: 6rem;
+}
+
+.sec1 .top-heading-ctn .field-img-ctn {
+  position: absolute;
+  top: 3rem;
+  right: 4rem;
+  width: 12rem;
+  height: 6rem;
+  background-color: yellowgreen;
+  border-radius: 100%;
+  border: 2px solid black;
+  transform: rotateZ(30deg);
+  box-shadow: 0.5rem 1rem orange, 1rem 2rem black, 2rem 4rem hotpink;
+}
+
+.sec1 .sport-img-ctn {
+  margin: 1rem 0rem 2rem 0rem;
+  width: 100%;
+  height: 14rem;
+  border-radius: 1rem;
+  border: 2px solid black;
+  background-image: url("/gym_go/img/img.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: palegoldenrod;
+}
+
+.sec1 .gym-description {
+  padding: 0rem 0.2rem;
+  margin-bottom: 2rem;
+}
+
+.sec2 {
+  margin: auto;
+  width: 80%;
+  padding: 0rem 0.2rem;
+  height: 24rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sec2 .class-description {
+  width: 50%;
+}
+
+.sec2 .class-description .title {
+  font-size: 2rem;
+}
+
+.sec2 .class-description .description {
+  margin-top: 2rem;
+  padding-right: 6rem;
+  line-height: 1.8rem;
+  font-size: 1.1rem;
+}
+
+.sec2 .clients-categories {
+  width: 48%;
+  height: 64%;
+}
+
+.sec2 .clients-categories ul {
+  margin: 1.2rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.sec2 .clients-categories ul li {
+  padding-bottom: 2rem;
+  width: 100%;
+  border-bottom: 2px solid black;
+}
+
+.sec2 .clients-categories ul li h4 {
+  font-size: 1.2rem;
+}
+
+.sec3 {
+  margin: auto;
+  width: 80%;
+  padding: 1rem 0rem;
+  height: 32rem;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 16rem);
+}
+
+.sec3 .img {
+  background-color: rgb(168, 144, 238);
+  border-radius: 1rem;
+  border: 2px solid black;
+}
+
+.sec3 .img1 {
+  background-image: url("/gym_go/img/img3.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.sec3 .img2 {
+  background-image: url("/gym_go/img/img1.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.sec3 .img3 {
+  background-image: url("/gym_go/img/img2.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.sec3 .profile-ctn {
+  padding: 1rem;
+  background-color: black;
+  color: whitesmoke;
+  border-radius: 1rem;
+  border: 2px solid black;
+  grid-column: 2/span 2;
+}
+
+.sec3 .profile-ctn .user-details-ctn {
+  position: relative;
+  padding: 0.6rem;
+  display: flex;
+  align-items: center;
+}
+
+.sec3 .profile-ctn .user-details-ctn .user-img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 100%;
+  background-color: salmon;
+  background-image: url("/img/circle.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.sec3 .profile-ctn .user-details-ctn .user-name {
+  font-style: italic;
+  margin-left: 1rem;
+}
+
+.sec3 .profile-ctn .user-details-ctn .show-more-btn {
+  background-color: orangered;
+  position: absolute;
+  right: 0rem;
+  padding: 0.4rem 1.2rem;
+  border: none;
+  border-radius: 2rem;
+}
+
+.sec3 .profile-ctn .visit-links {
+  font-size: 2rem;
+}
+
+.sec3 .profile-ctn .visit-links .title {
+  padding: 1rem;
+  width: 4rem;
+  color: yellow;
+}
+
+.sec3 .about-routine {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 16rem;
+  background-color: black;
+  color: gainsboro;
+  border-radius: 1rem;
+  border: 2px solid black;
+  font-size: 2.2rem;
+  font-weight: 500;
+}
+
+.sec3 .about-routine p {
+  width: 60%;
+}
+
+.sec3 .about-routine span {
+  color: yellow;
+}
+
+/*# sourceMappingURL=style.css.map */

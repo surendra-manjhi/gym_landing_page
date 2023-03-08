@@ -1,0 +1,248 @@
+@import "./utility";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: whitesmoke;
+}
+
+.header {
+  @include pageSize();
+  @include flexBox();
+  padding: 2rem 0rem;
+  border-bottom: 2px solid black;
+
+  #logo {
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+
+  ul {
+    width: 40rem;
+    @include flexBox();
+
+    a {
+      color: grey;
+
+      &:hover {
+        color: black;
+      }
+    }
+
+    .active {
+      color: black;
+    }
+  }
+
+  #btn {
+    @include contactBtn();
+    cursor: pointer;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+  }
+}
+
+.sec1 {
+  @include pageSize();
+  position: relative;
+  padding: 1rem 0rem;
+  border-bottom: $borderBottom;
+
+  .top-heading-ctn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .title {
+      width: 40rem;
+      font-size: 6rem;
+    }
+
+    .field-img-ctn {
+      position: absolute;
+      top: 3rem;
+      right: 4rem;
+      width: 12rem;
+      height: 6rem;
+      background-color: yellowgreen;
+      border-radius: 100%;
+      border: 2px solid black;
+      transform: rotateZ(30deg);
+      box-shadow: 0.5rem 1rem orange, 1rem 2rem black, 2rem 4rem hotpink;
+    }
+  }
+
+  .sport-img-ctn {
+    margin: 1rem 0rem 2rem 0rem;
+    width: 100%;
+    height: 14rem;
+    border-radius: 1rem;
+    border: 2px solid black;
+    background-image: url("/gym_go/img/img.jpg");
+    @include imgCover();
+    background-color: palegoldenrod;
+  }
+
+  .gym-description {
+    padding: 0rem 0.2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.sec2 {
+  @include pageSize();
+  padding: 0rem 0.2rem;
+  height: 24rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .class-description {
+    width: 50%;
+
+    .title {
+      font-size: 2rem;
+    }
+
+    .description {
+      margin-top: 2rem;
+      padding-right: 6rem;
+      line-height: 1.8rem;
+      font-size: 1.1rem;
+    }
+  }
+
+  .clients-categories {
+    width: 48%;
+    height: 64%;
+
+    ul {
+      margin: 1.2rem;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: start;
+
+      li {
+        padding-bottom: 2rem;
+        width: 100%;
+        border-bottom: 2px solid black;
+
+        h4 {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}
+
+.sec3 {
+  @include pageSize();
+  padding: 1rem 0rem;
+  height: 32rem;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 16rem);
+
+  .img {
+    background-color: rgb(168, 144, 238);
+    border-radius: 1rem;
+    border: 2px solid black;
+  }
+
+  .img1 {
+    background-image: url("/gym_go/img/img3.jpg");
+    @include imgCover();
+  }
+
+  .img2 {
+    background-image: url("/img/img1.jpg");
+    @include imgCover();
+  }
+
+  .img3 {
+    background-image: url("/img/img2.jpg");
+    @include imgCover();
+  }
+
+  .profile-ctn {
+    padding: 1rem;
+    background-color: black;
+    color: whitesmoke;
+    border-radius: 1rem;
+    border: 2px solid black;
+    grid-column: 2 / span 2;
+
+    .user-details-ctn {
+      position: relative;
+      padding: 0.6rem;
+      display: flex;
+      align-items: center;
+
+      .user-img {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 100%;
+        background-color: salmon;
+        background-image: url("/img/circle.jpg");
+        @include imgCover();
+      }
+
+      .user-name {
+        font-style: italic;
+        margin-left: 1rem;
+      }
+
+      .show-more-btn {
+        background-color: orangered;
+        position: absolute;
+        right: 0rem;
+        padding: 0.4rem 1.2rem;
+        border: none;
+        border-radius: 2rem;
+      }
+    }
+
+    .visit-links {
+      font-size: 2rem;
+
+      .title {
+        padding: 1rem;
+        width: 4rem;
+        color: yellow;
+      }
+    }
+  }
+
+  .about-routine {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 16rem;
+    background-color: black;
+    color: gainsboro;
+    border-radius: 1rem;
+    border: 2px solid black;
+    font-size: 2.2rem;
+    font-weight: 500;
+
+    p {
+      width: 60%;
+    }
+
+    span {
+      color: yellow;
+    }
+  }
+}
